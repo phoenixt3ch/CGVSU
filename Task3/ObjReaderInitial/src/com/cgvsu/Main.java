@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        Path fileName = Path.of("../../3DModels/Faceform/WrapHead.obj");
+        Path fileName = Path.of("3DModels/Faceform/WrapHead.obj");
         String fileContent = Files.readString(fileName);
 
         System.out.println("Loading model ...");
