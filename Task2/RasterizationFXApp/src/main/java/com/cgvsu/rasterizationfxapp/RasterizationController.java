@@ -20,8 +20,10 @@ public class RasterizationController {
         anchorPane.prefWidthProperty().addListener((ov, oldValue, newValue) -> canvas.setWidth(newValue.doubleValue()));
         anchorPane.prefHeightProperty().addListener((ov, oldValue, newValue) -> canvas.setHeight(newValue.doubleValue()));
 
-        Rasterization.drawRectangle(canvas.getGraphicsContext2D(), 200, 300, 200, 100, Color.CHOCOLATE);
-        Rasterization.drawRectangle(canvas.getGraphicsContext2D(), 250, 250, 50, 200, Color.AQUA);
+        Rasterization.drawLine(canvas.getGraphicsContext2D(), 0, 0, 100, 150, Color.BLACK);
+        Rasterization.drawLine(canvas.getGraphicsContext2D(), 300, 400, 300, 200, Color.ORANGE);
+        Rasterization.drawLine(canvas.getGraphicsContext2D(), 400, 550, 750, 550, Color.RED);
+        Rasterization.drawLine(canvas.getGraphicsContext2D(), 700, 50, 500, 200, Color.BLUE);
     }
 
 }
