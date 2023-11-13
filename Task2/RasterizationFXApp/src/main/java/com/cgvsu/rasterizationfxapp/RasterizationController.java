@@ -20,10 +20,10 @@ public class RasterizationController {
         anchorPane.prefWidthProperty().addListener((ov, oldValue, newValue) -> canvas.setWidth(newValue.doubleValue()));
         anchorPane.prefHeightProperty().addListener((ov, oldValue, newValue) -> canvas.setHeight(newValue.doubleValue()));
 
-        Rasterization.drawLine(canvas.getGraphicsContext2D(), 0, 0, 100, 150, Color.BLACK, Color.YELLOW);
-        Rasterization.drawLine(canvas.getGraphicsContext2D(), 300, 400, 300, 200, Color.ORANGE, Color.FUCHSIA);
-        Rasterization.drawLine(canvas.getGraphicsContext2D(), 400, 550, 750, 550, Color.RED, Color.NAVY);
-        Rasterization.drawLine(canvas.getGraphicsContext2D(), 700, 50, 500, 200, Color.BLUE, Color.PINK);
+        canvas.setOnMouseMoved(mouseEvent -> {
+            canvas.getGraphicsContext2D().clearRect(0, 0, 800, 600);
+            Rasterization.drawLine(canvas.getGraphicsContext2D(), 400, 300, mouseEvent.getX(), mouseEvent.getY(), Color.RED, Color.BLUE);
+        });
     }
 
 }
